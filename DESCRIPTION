@@ -1,11 +1,20 @@
 Package: styledom
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Style Dom
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Depends: R (>= 3.6.0)
+Imports:
+    dplyr (>= 0.8.3), 
+    purrr (>= 0.3.3),
+    knitr (>= 1.28),
+    kableExtra(>= 1.1.0)
+Published: 2020-03-01
+Author: Dom Grisafe
+Maintainer: Dom Grisafe <21165092+dgrisafe@users.noreply.github.com>
+Description: Common functions for clinical data analysis projects.
+    I make similar plots for exploratory data analysis. This is 
+    my preservation of my preferred style for common data visualization.
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.0.2
+License: MIT + file LICENSE
