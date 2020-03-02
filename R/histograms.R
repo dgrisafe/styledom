@@ -117,5 +117,6 @@ plot_hist_categorical <- function(df, var, color_fill = "grey40"){
     ggplot(aes(x = !!var_dplyr %>% str_wrap_factor(12))) +
     geom_bar(fill = color_fill) +
     geom_label(data = data_stats, aes(y = .data$var_count/2, label = stats_label), size = 3) +
+    xlab("Categorical Variable") +
     coord_flip()
 }
