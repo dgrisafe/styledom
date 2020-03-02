@@ -32,5 +32,10 @@ Produces table in R Markdown.
 }
 \examples{
 quick_kable(iris)
-quick_kable(iris, lab_title = "Cool HTML Table of Iris Data", col_names = c("S Length", "S Width", "P Length", "P Width", "Species"))
+quick_kable(
+    iris,
+    lab_title = "Cool HTML Table of Iris Data",
+    col_names = c("S Length", "S Width", "P Length", "P Width", "Species")
+    )
+
 }

@@ -26,6 +26,6 @@ iris_estimate   <- mean(iris$Petal.Length)
  iris_std_err   <- sd(iris$Petal.Length) / sqrt(length(iris$Petal.Length))
 iris_limit_low  <- iris_estimate - 1.96 * iris_std_err
 iris_limit_high <- iris_estimate + 1.96 * iris_std_err
-
 pretty_estimate(iris_estimate, iris_limit_low, iris_limit_high, 2)
+
 }

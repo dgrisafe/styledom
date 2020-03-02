@@ -7,13 +7,16 @@ Imports:
     dplyr (>= 0.8.3), 
     purrr (>= 0.3.3),
     knitr (>= 1.28),
-    kableExtra(>= 1.1.0)
+    kableExtra (>= 1.1.0),
+    ggplot2 (>= 3.2.1),
+    scales (>= 1.1.0),
+    stats(>= 3.6.1)
 Published: 2020-03-01
 Author: Dom Grisafe
 Maintainer: Dom Grisafe <21165092+dgrisafe@users.noreply.github.com>
 Description: Common functions for clinical data analysis projects.
-    I make similar plots for exploratory data analysis. This is 
-    my preservation of my preferred style for common data visualization.
+    I make similar plots for exploratory data analyses. This package documents
+    my preferred style for common formatting and data visualizations.
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2

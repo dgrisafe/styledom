@@ -20,4 +20,5 @@ All missing data points are excluded from the mean and deviation calculations.
 \examples{
 std_var(iris$Petal.Length)
 std_var(cars$speed)
+
 }

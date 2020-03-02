@@ -20,4 +20,5 @@ Format number to n decimal places
 \examples{
 trim_n(pi, 3)
 trim_n(1.2345, 1)
+
 }
