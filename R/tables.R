@@ -52,7 +52,9 @@ quick_kable <- function(df, p_digits = 3, p_format = "html", lab_title = "", col
 #' @return New character string variable with html code for color of p-value.
 #'
 #' @examples
-#' color_p_value(c(0.00, 0.03, 0.05, 0.09, 0.11, 0.12, 0.16, 0.16, 0.21, 0.22))
+#' p_val <- c(0.00, 0.03, 0.05, 0.09, 0.11, 0.12, 0.16, 0.16, 0.21, 0.22)
+#' p_val_color <- color_p_value(p_val)
+#' quick_kable(data.frame(p_val, p_val_color))
 #'
 #' @export
 color_p_value <- function(var_p_value){
@@ -62,4 +64,3 @@ color_p_value <- function(var_p_value){
     color = ifelse(var_p_value < 0.05, "red", ifelse(var_p_value < 0.15, "orange", "black"))
   )
 }
-

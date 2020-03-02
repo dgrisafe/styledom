@@ -18,6 +18,8 @@ Color the p-values in html so they change colors conditional on values.
 Orange indicates p-values less than 0.15.
 }
 \examples{
-color_p_value(c(0.00, 0.03, 0.05, 0.09, 0.11, 0.12, 0.16, 0.16, 0.21, 0.22))
+p_val <- c(0.00, 0.03, 0.05, 0.09, 0.11, 0.12, 0.16, 0.16, 0.21, 0.22)
+p_val_color <- color_p_value(p_val)
+quick_kable(data.frame(p_val, p_val_color))
 
 }
