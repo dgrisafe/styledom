@@ -20,8 +20,8 @@ trim_n <- function(x, n_dec = 1){sprintf(paste0("%.", n_dec, "f"), round(as.doub
 #'
 #' Create character string of an estimate with its confidence limits.
 #'
-#' @import stats
 #' @import purrr
+#' @importFrom stats sd
 #'
 #' @param estimate Numeric estimate.
 #' @param limit_low Numeric estimate lower confidence interval.

@@ -45,7 +45,7 @@ quick_kable <- function(df, p_digits = 3, p_format = "html", lab_title = "", col
 #'    Red indicates p-values less than 0.05.
 #' Orange indicates p-values less than 0.15.
 #'
-#' @import kableExtra
+#' @importFrom kableExtra cell_spec
 #'
 #' @param var_p_value Numeric variable of p-values to be colored conditionally.
 #'

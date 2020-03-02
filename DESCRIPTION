@@ -4,13 +4,17 @@ Title: Style Dom
 Version: 0.1.0
 Depends: R (>= 3.6.0)
 Imports:
+    stats(>= 3.6.1),
+    rlang (>= 0.4.2),
+    kableExtra (>= 1.1.0),
     dplyr (>= 0.8.3), 
     purrr (>= 0.3.3),
+    forcats (>= 0.4.0),
+    stringr (>= 1.4.0),  
     knitr (>= 1.28),
-    kableExtra (>= 1.1.0),
     ggplot2 (>= 3.2.1),
-    scales (>= 1.1.0),
-    stats(>= 3.6.1)
+    cowplot(>= 1.0.0),
+    scales (>= 1.1.0)
 Published: 2020-03-01
 Author: Dom Grisafe
 Maintainer: Dom Grisafe <21165092+dgrisafe@users.noreply.github.com>
