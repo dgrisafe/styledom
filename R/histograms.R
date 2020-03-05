@@ -75,16 +75,17 @@ plot_hist_continuous <- function(df, var, n_binwidth, color_fill = "grey40"){
 #'
 #' @param df Dataframe to be converted to table.
 #' @param var Numeric for maximum number of digits to round numeric values.
+#' @param flip_plot  Flip axis of categorical plot by default.
 #' @param color_fill Default color for bars.
 #'
 #' @return Histogram.
 #'
 #' @examples
 #' plot_hist_categorical(df = iris,   var = Species)
-#' plot_hist_categorical(df = infert, var = education, color_fill = "blue")
+#' plot_hist_categorical(df = infert, var = education, flip_plot = FALSE, color_fill = "blue")
 #'
 #' @export
-plot_hist_categorical <- function(df, var, color_fill = "grey40"){
+plot_hist_categorical <- function(df, var, flip_plot = TRUE, color_fill = "grey40"){
   var_dplyr <- enquo(var)
 
   # https://github.com/tidyverse/forcats/issues/122
@@ -113,10 +114,12 @@ plot_hist_categorical <- function(df, var, color_fill = "grey40"){
   )
 
   # plot
-  df_internal %>%
+  return_plot <- df_internal %>%
     ggplot(aes(x = !!var_dplyr %>% str_wrap_factor(12))) +
     geom_bar(fill = color_fill) +
     geom_label(data = data_stats, aes(y = .data$var_count/2, label = stats_label), size = 3) +
-    xlab("Categorical Variable") +
-    coord_flip()
+    xlab("Categorical Variable")
+
+  # flip the plot by default
+  if(flip_plot){return_plot}else{return_plot + coord_flip()}
 }
