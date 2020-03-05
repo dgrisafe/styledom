@@ -120,6 +120,6 @@ plot_hist_categorical <- function(df, var, flip_plot = TRUE, color_fill = "grey4
     geom_label(data = data_stats, aes(y = .data$var_count/2, label = stats_label), size = 3) +
     xlab("Categorical Variable")
 
-  # flip the plot by default
-  if(flip_plot){return_plot}else{return_plot + coord_flip()}
+  # flip the plot by default, otherwise return unflipped plot
+  if(flip_plot){return_plot + coord_flip()}else{return_plot}
 }
