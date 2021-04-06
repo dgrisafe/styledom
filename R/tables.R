@@ -64,3 +64,26 @@ color_p_value <- function(var_p_value){
     color = ifelse(var_p_value < 0.05, "red", ifelse(var_p_value < 0.15, "orange", "black"))
   )
 }
+color_p_value <- function(var_p_value){
+
+  kableExtra::cell_spec(
+    sprintf("%.3f", round(var_p_value, 3)),
+    "html",
+    # if missing, then make light blue
+    color = ifelse(
+      is.na(var_p_value),
+      yes = "lightblue",
+      # if less than 0.05, make red
+      no = ifelse(
+        var_p_value < 0.05,
+        yes = "red",
+        no = ifelse(
+          # if marginally significant, make orange
+          var_p_value < 0.15,
+          yes = "orange",
+          no = "black"
+          )
+        )
+      )
+    )
+  }
